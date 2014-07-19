@@ -2,7 +2,7 @@
 
 namespace Bocami.Practices.Query.Validation
 {
-    public interface IQueryValidator<TQuery> : IValidator<TQuery>
+    public interface IQueryValidator<in TQuery> : IValidator<TQuery>
         where TQuery : class, IQuery
     {
     }

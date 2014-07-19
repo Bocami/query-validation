@@ -37,7 +37,7 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Bocami.Practices.Query.1.0.0\lib\net451\Bocami.Practices.Query.dll</HintPath>
     </Reference>
-    <Reference Include="Bocami.Practices.Validation, Version=1.0.5312.38398, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="Bocami.Practices.Validation, Version=1.0.5313.22665, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\packages\Bocami.Practices.Validation.1.0.0\lib\net45\Bocami.Practices.Validation.dll</HintPath>
     </Reference>
