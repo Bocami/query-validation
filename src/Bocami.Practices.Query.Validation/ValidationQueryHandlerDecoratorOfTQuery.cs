@@ -3,14 +3,14 @@ using Bocami.Practices.Decorator;
 
 namespace Bocami.Practices.Query.Validation
 {
-    public abstract class ValidationQueryHandlerDecorator<TQuery, TQueryResult> : IQueryHandler<TQuery, TQueryResult>, IDecorator<IQueryHandler<TQuery, TQueryResult>>
-        where TQuery : class, IQuery
-        where TQueryResult : class, IQueryResult
+    public class ValidationQueryHandlerDecorator<TQuery, TQueryResult> : IQueryHandler<TQuery, TQueryResult>, IDecorator<IQueryHandler<TQuery, TQueryResult>>
+        where TQuery : IQuery
+        where TQueryResult : IQueryResult
     {
         private readonly IQueryHandler<TQuery, TQueryResult> queryHandler;
         private readonly IQueryValidator<TQuery> queryValidator;
 
-        protected ValidationQueryHandlerDecorator(IQueryHandler<TQuery, TQueryResult> queryHandler, IQueryValidator<TQuery> queryValidator)
+        public ValidationQueryHandlerDecorator(IQueryHandler<TQuery, TQueryResult> queryHandler, IQueryValidator<TQuery> queryValidator)
         {
             if (queryHandler == null)
                 throw new ArgumentNullException("queryHandler");
